@@ -10,8 +10,8 @@ import { GwitterService } from '../../services/movie.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   //timeline: Tweet[];
+  tweet: String;
 
   constructor(
     //private gwitterService: GwitterService
@@ -19,11 +19,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     //this.getTimeline();
+    this.tweet="Lorem ipsum dolor"
   }
 
   /* 
   getTimeline(): void {
-    this.movieService.getMovies()
+    this.gwitterService.getMovies()
         .subscribe(movies => this.timeline= movies);
   }
   */
