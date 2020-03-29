@@ -1,23 +1,16 @@
+<nav mat-tab-nav-bar mat-align-tabs="center">
+    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive"> 
+        <div *ngIf="link.label==='Home'"><mat-icon>home</mat-icon></div>
+        <div *ngIf="link.label==='Search'"><mat-icon>search</mat-icon></div>
+        <div *ngIf="link.label==='Settings'"><mat-icon>settings</mat-icon></div>
+    </a>
+</nav>
+<router-outlet></router-outlet>
+
 <section>
-    <h2>Timeline</h2>
     <!--*ngFor="let tweet of timeline"-->
     <section>
         <!--{{tweet}}-->
         <app-tweet [tweet]="tweet"></app-tweet>
     </section>
 </section>
-
-<nav mat-tab-nav-bar>
-    <a mat-tab-link routerLink="/nav">Hola
-        <mat-tab>
-            <ng-template mat-tab-label>
-              <mat-icon class="example-tab-icon">thumb_up</mat-icon>
-              First
-            </ng-template>
-        </mat-tab>
-    </a>
-    <a mat-tab-link routerLink="/nav"></a>
-    <a mat-tab-link routerLink="/nav"></a>
-</nav>
-  
-<router-outlet></router-outlet>
