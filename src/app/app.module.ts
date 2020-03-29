@@ -11,16 +11,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { TweetComponent } from './components/tweet/tweet.component';
+import { NavtabComponent } from './components/navtab/navtab.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent,
-    TweetComponent
+    TweetComponent,
+    NavtabComponent
   ],
   imports: [
     BrowserModule,
