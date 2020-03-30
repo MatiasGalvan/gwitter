@@ -4,12 +4,16 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatTabsModule} from '@angular/material/tabs'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
+import { TweetComponent } from './components/tweet/tweet.component';
+import { NavtabComponent } from './components/navtab/navtab.component';
 import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
 
 
@@ -17,8 +21,9 @@ import { TweetDetailsComponent } from './components/tweet-details/tweet-details.
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent,
-    TweetDetailsComponent
+    TweetComponent,
+    NavtabComponent,
+    TweetDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,8 +32,9 @@ import { TweetDetailsComponent } from './components/tweet-details/tweet-details.
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
-
+    MatButtonModule,
+    MatCardModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
