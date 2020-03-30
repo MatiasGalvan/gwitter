@@ -2,22 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button'
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatTabsModule} from '@angular/material/tabs'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
 import { TweetComponent } from './components/tweet/tweet.component';
-import { TweetServiceClient } from './services/TweetServiceClient'
+import { NavtabComponent } from './components/navtab/navtab.component';
+import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    TweetComponent
+    HomeComponent,
+    TweetComponent,
+    NavtabComponent,
+    TweetDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,10 +32,11 @@ import { TweetServiceClient } from './services/TweetServiceClient'
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
-
+    MatButtonModule,
+    MatCardModule,
+    MatTabsModule,
   ],
-  providers: [TweetServiceClient],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
