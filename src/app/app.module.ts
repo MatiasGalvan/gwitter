@@ -11,8 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { TweetComponent } from './components/tweet/tweet.component';
 import { NavtabComponent } from './components/navtab/navtab.component';
+import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { NavtabComponent } from './components/navtab/navtab.component';
     AppComponent,
     HomeComponent,
     TweetComponent,
-    NavtabComponent
+    NavtabComponent,
+    TweetDetailsComponent,
   ],
   imports: [
     BrowserModule,
