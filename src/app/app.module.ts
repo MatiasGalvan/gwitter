@@ -15,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { NavtabComponent } from './components/navtab/navtab.component';
 import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
-
+import { TwitterService } from 'src/app/services/twitter.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,8 +36,11 @@ import { TweetDetailsComponent } from './components/tweet-details/tweet-details.
     MatButtonModule,
     MatCardModule,
     MatTabsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    TwitterService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

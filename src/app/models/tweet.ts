@@ -1,7 +1,7 @@
 import { IUser } from './user';
 
 export interface ITweet {
-  created_at : Date;
+  created_at : String;
   id : number;
   id_str : string;
   text : string;

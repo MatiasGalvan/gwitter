@@ -1,9 +1,7 @@
 <app-navtab></app-navtab>
 
 <section>
-    <!--*ngFor="let tweet of timeline"-->
-    <section>
-        <!--{{tweet}}-->
+    <section *ngFor="let tweet of timeline">
         <app-tweet [tweet]="tweet"></app-tweet>
     </section>
 </section>
