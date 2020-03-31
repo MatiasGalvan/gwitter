@@ -1,5 +1,5 @@
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { TwitterService } from 'src/app/services/twitter.service';
+import { TrendService } from 'src/app/services/trend.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -48,7 +48,7 @@ import { TweetDetailsComponent } from './components/tweet-details/tweet-details.
     MatInputModule,
     MatCardModule,
   ],
-  providers: [TwitterService],
+  providers: [TrendService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

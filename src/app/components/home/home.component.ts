@@ -11,7 +11,7 @@ import { GwitterService } from '../../services/movie.service';
 })
 export class HomeComponent implements OnInit {
   // timeline: any[];
-  tweet: String;
+  tweet: string;
 
   constructor(
     //  private tweetService: TweetService,

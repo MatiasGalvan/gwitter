@@ -1,8 +1,8 @@
 export interface ITrend {
-
+  id: number;
   name: string;
   url: string;
-  promoted_content: null;
+  prometed_content: any;
   query: string;
   tweet_volume: number;
 }

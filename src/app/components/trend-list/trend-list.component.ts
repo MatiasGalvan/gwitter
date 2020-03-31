@@ -1,8 +1,9 @@
 
-import { ITrend } from './../../trend';
-import { TwitterService } from 'src/app/services/twitter.service';
+
+import { TrendService } from 'src/app/services/trend.service';
 import { Component, OnInit } from '@angular/core';
 import { filter } from 'rxjs/operators';
+import { ITrend } from 'src/app/models/trend';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class TrendListComponent implements OnInit {
 
 
 
-  constructor(private twitterService: TwitterService) {
+  constructor(private trendService: TrendService) {
 
   }
 
@@ -34,7 +35,7 @@ export class TrendListComponent implements OnInit {
   }*/
 
   getTrends(): void {
-    this.twitterService.getTrends()
+    this.trendService.getTrends()
       .subscribe(obj => {
         for (const i of obj) {
           console.log(i.trends);

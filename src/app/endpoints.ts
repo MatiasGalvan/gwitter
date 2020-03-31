@@ -1,4 +1,4 @@
-export const URL = 'https://localhost:8080';
+export const URL = 'http://localhost:8080';
 export const TRENDS = '/trends?id=23424747'; // params required : id
 export const TIMELINE = '/timeline'; // params optional : count
 export const SEARCH = '/search'; // params required : q

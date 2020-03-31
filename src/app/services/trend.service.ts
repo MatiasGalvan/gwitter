@@ -1,11 +1,10 @@
 
-import { ITrend } from './../trend';
 import { URL, TRENDS, SEARCH } from './../endpoints';
 import { HttpErrorResponse, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { tap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
+import { ITrend } from '../models/trend';
 
 
 
@@ -14,7 +13,7 @@ import { throwError } from 'rxjs';
   providedIn: 'root'
 })
 
-export class TwitterService {
+export class TrendService {
 
   trends: ITrend[];
   private url = URL + TRENDS;
