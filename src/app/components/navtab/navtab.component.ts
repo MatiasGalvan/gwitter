@@ -21,13 +21,13 @@ export class NavtabComponent implements OnInit {
           index: 0
       }, {
           label: 'Search',
-          link: '/',
+          link: '/trend-list',
           index: 1
       }, {
           label: 'Settings',
           link: '/settings',
           index: 2
-      }, 
+      },
     ];
   }
 
