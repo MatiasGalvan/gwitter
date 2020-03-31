@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 /*
 import { Tweet } from '../../interfaces/IMovie';
 import { GwitterService } from '../../services/movie.service';
@@ -15,7 +16,13 @@ export class HomeComponent implements OnInit {
 
   constructor(
     //  private tweetService: TweetService,
+    private router: Router
   ) { }
+
+  handleSettingView(): void {
+    this.router.navigate(['/settings']);
+
+  }
 
   ngOnInit(): void {
 
