@@ -1,49 +1,9 @@
-<p>home works!</p>
+<app-navtab></app-navtab>
 
 <section>
-
+    <!--*ngFor="let tweet of timeline"-->
+    <section>
+        <!--{{tweet}}-->
+        <app-tweet [tweet]="tweet"></app-tweet>
+    </section>
 </section>
-
-
-<!--
-    Para cada tweet crear un container, del lado izquierdo mostrar la imagen y del lado derecho el resto de la
-    info
-    <tweet *ngFor="let tweet of timeline">
-        <mat-drawer-container class="example-container">
-            <mat-drawer mode="side" opened>
-                Aca iria la foto de la cuenta
-            </mat-drawer>
-
-            <mat-drawer-content>
-                <h4>{{tweet.nombre de la cuenta}} <span>{{tweet. @cuenta}}</span></h4>
-
-                <p>{{tweet.text}}</p>
-
-                <img src={{tweet.image}} alt="" *ngIf={{tweet.image}}>
-
-                <h3>Mini Fab Buttons</h3>
-
-                <div class="example-button-row">  
-                    <button mat-mini-fab aria-label="Example icon-button with a heart icon">
-                        <mat-icon>
-                            like
-                        </mat-icon>
-                    </button>
-                    <button mat-mini-fab aria-label="Example icon-button with a heart icon">
-                        <mat-icon>
-                            rt
-                        </mat-icon>
-                    </button>
-                    <button mat-mini-fab aria-label="Example icon-button with a heart icon">
-                        <mat-icon>
-                            comment
-                        </mat-icon>
-                    </button>
-                </div>
-
-                Aca iria el resto de la info del tweet
-            </mat-drawer-content>
-        </mat-drawer-container>
-    <tweet>
-
--->
