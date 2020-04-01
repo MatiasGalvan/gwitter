@@ -14,8 +14,8 @@ export class TwitterService {
     private http: HttpClient,
   ) { }
 
-  getTimeline(){
-    return this.http.get<any>(URL+TIMELINE)
+  getTimeline(amount: number){
+    return this.http.get<any>(URL+TIMELINE+amount)
       .pipe(tap(data => JSON.parse(JSON.stringify(data))));
   }
 

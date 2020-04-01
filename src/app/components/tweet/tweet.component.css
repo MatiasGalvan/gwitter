@@ -55,3 +55,20 @@
 .verified{
     font-size: 18px;
 }
+
+.tweetImage{
+    margin: 10px auto;
+    border-radius: 5px;
+    border: solid 1px gray;
+}
+
+.tweetImageContainer{
+    width: 100%;
+}
+
+@media screen and (max-width:550px) {
+    .tweetImage{
+        width: 100%;
+        min-width: 300px;
+    }
+}

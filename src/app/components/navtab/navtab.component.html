@@ -1,9 +1,9 @@
-<h2>Gwitter</h2>
+<h2 class="pageTitle">Gwitter</h2>
 <nav mat-tab-nav-bar mat-align-tabs="center">
     <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">
-        <div *ngIf="link.label==='Home'"><mat-icon>home</mat-icon></div>
-        <div *ngIf="link.label==='Search'"><mat-icon>search</mat-icon></div>
-        <div *ngIf="link.label==='Settings'"><mat-icon>settings</mat-icon></div>
+        <div class="navItem" *ngIf="link.label==='Home'"><mat-icon>home</mat-icon></div>
+        <div class="navItem" *ngIf="link.label==='Search'"><mat-icon>search</mat-icon></div>
+        <div class="navItem" *ngIf="link.label==='Settings'"><mat-icon>settings</mat-icon></div>
     </a>
 </nav>
 

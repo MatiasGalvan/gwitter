@@ -22,7 +22,8 @@ import { TweetComponent } from './components/tweet/tweet.component';
 import { NavtabComponent } from './components/navtab/navtab.component';
 import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
 import { TwitterService } from 'src/app/services/twitter.service';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -50,6 +51,8 @@ import { TwitterService } from 'src/app/services/twitter.service';
     MatInputModule,
     MatCardModule,
     HttpClientModule,
+    InfiniteScrollModule,
+    NgxSpinnerModule,
   ],
   providers: [
     TwitterService,
