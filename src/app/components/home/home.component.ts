@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {TwitterService} from '../../services/twitter.service'
 
 import { Router } from '@angular/router';
+import {ITweet} from "../../models/tweet"
+import {IUser} from '../../models/user'
 
 /*
 import { Tweet } from '../../interfaces/IMovie';
@@ -18,7 +21,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
 
-    //  private tweetService: TweetService,
+   private twitterService: TwitterService,
     private router: Router
   ) { }
 
