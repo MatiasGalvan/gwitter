@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TwitterService } from 'src/app/services/twitter.service';
-import { ITweet } from '../../models/tweet';
-import { IUser } from '../../models/user';
+
+import { Router } from '@angular/router';
+
 /*
 import { Tweet } from '../../interfaces/IMovie';
 import { GwitterService } from '../../services/movie.service';
@@ -17,8 +17,17 @@ export class HomeComponent implements OnInit {
   //tweet: String;
 
   constructor(
-    private twitterService: TwitterService,
-  ) {}
+
+    //  private tweetService: TweetService,
+    private router: Router
+  ) { }
+
+  
+ 
+  handleSettingView(): void {
+    this.router.navigate(['/settings']);
+
+  }
 
   ngOnInit(): void {
     this.getTimeline();
