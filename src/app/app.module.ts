@@ -35,9 +35,8 @@ import { TrendpipePipe } from './pipes/trendpipe.pipe';
 
 
 
-
-
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -66,6 +65,8 @@ import { TrendpipePipe } from './pipes/trendpipe.pipe';
     MatInputModule,
     MatCardModule,
     HttpClientModule,
+    InfiniteScrollModule,
+    NgxSpinnerModule,
   ],
   providers: [
     TwitterService,
