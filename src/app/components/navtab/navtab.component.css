@@ -3,3 +3,12 @@ h2{
     margin-bottom: 0%;
     margin-top: 2%;
 }
+
+div{
+    margin: 12% 22px 0 22px;
+}
+
+.mat-icon{
+    transform: scale(1.5);
+}
+
