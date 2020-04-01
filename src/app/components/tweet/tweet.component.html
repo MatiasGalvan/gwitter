@@ -12,12 +12,21 @@
                         {{tweet.user.name}} <mat-icon class="verified" *ngIf="tweet.user.verified">verified_user</mat-icon>
                     </strong>
             
-                    <span class="screenName"> @{{tweet.user.screen_name}} - {{tweet.created_at}}</span>
+                    <span class="screenName"> @{{tweet.user.screen_name}} - {{tweet.created_at | date:'h:mm'}} p.m. - {{tweet.created_at | date:'d LLL. yy' | lowercase}}</span>
                 </h4>
             </header>
 
             <section>
                 {{tweet.text}}
+
+                <div class="tweetImageContainer" *ngIf="tweet.entities.media">
+                    <img
+                      src="{{tweet.entities.media[0].media_url}}"
+                      width="400"
+                      height="250"
+                      class="tweetImage"
+                    />
+                </div>
             </section>
         </mat-card-content>
 
