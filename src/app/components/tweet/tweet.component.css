@@ -7,27 +7,37 @@
 .container{
     display: flex;
     width: 100%;
-    background-color: lightgrey;
+    background-color: #fff;
     margin-bottom: 10px;
 }
 
+.container:hover{
+    background-color:rgba(170, 184, 194, 0.1);
+}
+
 .item1{
-    width: 10%;
+    width: 5%;
     min-width: 75px;
 }
 
 .item2{
-    width: 90%;
+    width: 95%;
     padding: 0 15px;
 }
 
 .profileImage{
-    max-width: 90px;
-    max-height: 90px;
-    min-width: 75px;
-    min-height: 75px;
+    max-width: 48px;
+    max-height: 48px;
+    min-width: 48px;
+    min-height: 48px;
     width: 100%;
     height: auto;
+}
+
+.image{
+    display: flex;
+    margin: auto;
+    justify-content: center;
 }
 
 .button{
@@ -36,4 +46,12 @@
 
 .circularImage{
     border-radius: 50%;
+}
+
+.screenName{
+    color:gray;
+}
+
+.verified{
+    font-size: 18px;
 }

@@ -27,10 +27,12 @@ import { TrendListComponent } from './components/trend-list/trend-list.component
 
 /*----------------------------Services----------------------------------------*/
 import { TrendService } from './services/trend.service'
+import { TwitterService } from 'src/app/services/twitter.service';
 
 /*-----------------------------Others-----------------------------------------*/
 import { AppComponent } from './app.component';
 import { TrendpipePipe } from './pipes/trendpipe.pipe';
+
 
 
 
@@ -63,8 +65,12 @@ import { TrendpipePipe } from './pipes/trendpipe.pipe';
     MatTabsModule,
     MatInputModule,
     MatCardModule,
+    HttpClientModule,
   ],
-  providers: [TrendService],
+  providers: [
+    TwitterService,
+    TrendService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

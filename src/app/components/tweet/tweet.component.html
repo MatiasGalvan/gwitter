@@ -1,31 +1,35 @@
 <mat-card class="container">
     <mat-card-content class="item1">
-        <section>
-            <img class="profileImage circularImage" src="https://material.angular.io/assets/img/examples/shiba1.jpg" alt="Photo">
+        <section class="image">
+            <img class="profileImage circularImage" src="{{tweet.user.profile_image_url}}" alt="Photo">
         </section>
     </mat-card-content>
     <section class="item2">
         <mat-card-content>
             <header>
-                <h4>jasjldk<span> @Juan Perez - hora</span></h4>
+                <h4>
+                    <strong>
+                        {{tweet.user.name}} <mat-icon class="verified" *ngIf="tweet.user.verified">verified_user</mat-icon>
+                    </strong>
+            
+                    <span class="screenName"> @{{tweet.user.screen_name}} - {{tweet.created_at}}</span>
+                </h4>
             </header>
 
             <section>
-                {{tweet}}
+                {{tweet.text}}
             </section>
-
-            <!--<img src='{{tweet.image}}' alt="" *ngIf={{tweet.image}}-->
         </mat-card-content>
 
         <mat-card-content>
             <button mat-mini-fab class="button" color="primary">
                 <mat-icon>favorite</mat-icon>
             </button>
-            <span>1</span>
+            <span>{{tweet.favorite_count}}</span>
             <button mat-mini-fab class="button" color="primary">
                 <mat-icon>autorenew</mat-icon>
             </button>
-            <span>1</span>
+            <span>{{tweet.retweet_count}}</span>
             <button mat-mini-fab class="button" color="primary">
                 <mat-icon>comment</mat-icon>
             </button>
