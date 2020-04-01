@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ITweet } from 'src/app/models/tweet';
 
 @Component({
   selector: 'app-tweet',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TweetComponent implements OnInit {
 
-  @Input () tweet: string;
+  @Input () tweet: ITweet;
 
   ngOnInit(): void {
   }

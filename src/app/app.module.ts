@@ -21,6 +21,8 @@ import { MatInputModule } from '@angular/material/input';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { NavtabComponent } from './components/navtab/navtab.component';
 import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
+import { TwitterService } from 'src/app/services/twitter.service';
+
 
 @NgModule({
   declarations: [
@@ -47,8 +49,12 @@ import { TweetDetailsComponent } from './components/tweet-details/tweet-details.
     MatTabsModule,
     MatInputModule,
     MatCardModule,
+    HttpClientModule,
   ],
-  providers: [TrendService],
+  providers: [
+    TwitterService,
+    TrendService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
