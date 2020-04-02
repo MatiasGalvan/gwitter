@@ -2,7 +2,7 @@
 
 import { TrendService } from 'src/app/services/trend.service';
 import { Component, OnInit } from '@angular/core';
-
+import { filter } from 'rxjs/operators';
 import { ITrend } from 'src/app/models/trend';
 
 
@@ -13,7 +13,7 @@ import { ITrend } from 'src/app/models/trend';
 })
 export class TrendListComponent implements OnInit {
 
-  selectedTrend: ITrend;
+  selectedTrend: string;
   errorMessage: any;
   trendListFiltered: ITrend[] = [];
 
@@ -27,8 +27,12 @@ export class TrendListComponent implements OnInit {
     this.getTrends();
   }
 
+  onClick(event: any) {
+    if (event && event.target) {
+      this.selectedTrend = event.target.innerText;
+    }
 
-
+  }
   getTrends(): void {
     this.trendService.getTrends()
       .subscribe(obj => {
