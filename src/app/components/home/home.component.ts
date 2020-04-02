@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { TwitterService } from 'src/app/services/twitter.service';
+import { Router } from '@angular/router';
 import { ITweet } from '../../models/tweet';
 import { IUser } from '../../models/user';
-/*
-import { Tweet } from '../../interfaces/IMovie';
-import { GwitterService } from '../../services/movie.service';
-*/
+import { TwitterService } from '../../services/twitter.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-home',
@@ -14,89 +12,60 @@ import { GwitterService } from '../../services/movie.service';
 })
 export class HomeComponent implements OnInit {
   timeline: ITweet[] = [];
-  //tweet: String;
+  notscrolly = true;
+  allLoaded = false;
+  initialTweets = 10;
+  index = 1;
+  count: number;
 
   constructor(
+
     private twitterService: TwitterService,
+    private router: Router,
+    private spinner: NgxSpinnerService
   ) { }
 
+
+  /*
+   handleSettingView(): void {
+     this.router.navigate(['/settings']);
+ 
+   }*/
+
   ngOnInit(): void {
-    this.getTimeline();
+    this.getTimeline(this.initialTweets);
     console.log(this.timeline);
-    // this.tweet="Lorem ipsum dolor";
+    this.addTweets(10);
   }
 
-
-  getTimeline(): void {
-    this.twitterService.getTimeline()
+  getTimeline(amount): void {
+    this.twitterService.getTimeline(amount)
       .subscribe(timeline => {
-        let tw: ITweet
-        console.log(timeline);
         timeline.forEach(tweet => {
-          tw = this.getTweet(tweet);
-          this.timeline.push(tw);
+          this.timeline.push(tweet);
         });
       });
   }
 
-  getTweet(tweet: any): ITweet {
-    let res: ITweet = {
-      created_at: this.getDate(tweet.created_at),
-      id: tweet.id,
-      id_str: tweet.id_str,
-      text: tweet.text,
-      source: tweet.source,
-      truncated: tweet.truncated,
+  onScroll() {
+    this.spinner.show();
+    if (this.count >= 200) this.allLoaded = true;
 
-      in_reply_to_status_id: tweet.in_reply_to_status_id,
-      in_reply_to_status_id_str: tweet.in_reply_to_status_id_str,
-      in_reply_to_user_id: tweet.in_reply_to_user_id,
-      in_reply_to_user_id_str: tweet.in_reply_to_user_id_str,
-      in_reply_to_screen_name: tweet.in_reply_to_screen_name,
-
-      retweeted: tweet.retweeted,
-      retweet_count: tweet.retweet_count,
-      favorited: tweet.favorited,
-      favorite_count: tweet.favorite_count,
-
-      user: this.getUser(tweet.user),
-    };
-
-    return res;
+    if (this.notscrolly && this.allLoaded === false) {
+      this.notscrolly = false;
+      this.index++;
+      this.count = this.initialTweets * this.index;
+      this.addTweets(this.count);
+      console.log(this.timeline);
+    }
   }
 
-  getUser(user: any): IUser {
-    let res: IUser = {
-      id: user.id,
-      id_str: user.id_str,
-      name: user.name,
-      screen_name: user.screen_name,
-      verified: user.verified,
-      url: user.url,
-      profile_image_url: user.profile_image_url,
-    }
-    return res;
-  }
-
-  getDate(date: any): string {
-    let res: string;
-    let aux: Date = new Date(date);
-    let month = '';
-    switch (aux.getMonth()) {
-      case 0: month = 'Jan'; break;
-      case 1: month = 'Feb'; break;
-      case 2: month = 'Mar'; break;
-      case 3: month = 'Apr'; break;
-      case 4: month = 'May'; break;
-      case 5: month = 'Jun'; break;
-      case 6: month = 'Jul'; break;
-      case 7: month = 'Aug'; break;
-      case 8: month = 'Sep'; break;
-      case 9: month = 'Oct'; break;
-      case 10: month = 'Nov'; break;
-      case 11: month = 'Dec'; break;
-    }
-    res = `${aux.getDate()} ${month}`;
-    return res;
+  addTweets(count: number) {
+    this.twitterService.getTimeline(count)
+      .subscribe(tweets => {
+        this.timeline = tweets;
+        this.notscrolly = true;
+        this.spinner.hide();
+      });
   }
 }
