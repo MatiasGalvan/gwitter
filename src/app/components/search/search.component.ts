@@ -14,8 +14,7 @@ export class SearchComponent implements OnInit, OnChanges {
   keyword = '';
   @Input() keyTrend: string;
 
-  constructor(private twitterService: TwitterService) { }
-
+  constructor( private twitterService: TwitterService ) { }
 
   ngOnInit(): void {
     this.getTweetList(this.keyword);
@@ -25,19 +24,14 @@ export class SearchComponent implements OnInit, OnChanges {
     console.log("Changes " + changes);
     if (changes.keyTrend.currentValue) {
       this.keyword = changes.keyTrend.currentValue;
+      this.keyword = this.keyword.replace('#','');
       this.getTweetList(this.keyword);
-
     }
-
   }
 
   onClick() {
-
     this.getTweetList(this.keyword);
-
   }
-
-
 
   getTweetList(q: string): void {
     this.twitterService.getTweetList(q)
@@ -52,8 +46,8 @@ export class SearchComponent implements OnInit, OnChanges {
           // error code
           console.log(error);
         });
-
   }
+
 }
 
 

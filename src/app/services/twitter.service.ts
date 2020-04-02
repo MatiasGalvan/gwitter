@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpErrorResponse, HttpClient } from '@angular/common/http';
 import { URL, SEARCH, TIMELINE } from './../endpoints';
-import { ITweet } from '../models/tweet';
 import { map, tap } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import { IUser } from '../models/user';
 import { IConfiguration } from '../models/configuration';
 
 @Injectable({
@@ -66,10 +64,6 @@ export class TwitterService {
 
   getSettings() : IConfiguration{
     return this.settings;
-  }
-
-  setSettings(set: IConfiguration){
-    this.settings = set;
   }
 
   private handleError(err: HttpErrorResponse) {
