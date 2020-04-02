@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getTimeline(this.initialTweets);
     console.log(this.timeline);
-    //this.addTweet();
+    this.addTweets(10);
   }
 
   getTimeline(amount): void {

@@ -1,1 +1,6 @@
-<p>settings works!</p>
+<mat-selection-list class="container">
+  <h3>Silence notifications from...</h3>
+  <mat-list-option id="option" (click)="handleCheck(i)" *ngFor="let setting of settings;let i = index"  color="primary">
+    {{ setting.setting }}
+  </mat-list-option>
+</mat-selection-list>
