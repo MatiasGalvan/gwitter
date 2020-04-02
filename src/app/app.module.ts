@@ -1,3 +1,4 @@
+import { TweetpipePipe } from './pipes/tweetpipe.pipe';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { TrendService } from 'src/app/services/trend.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -15,13 +16,14 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TrendListComponent } from './components/trend-list/trend-list.component';
 import { FormsModule } from '@angular/forms';
-import { TrendpipePipe } from './pipes/trendpipe.pipe';
+
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
 import { TweetComponent } from './components/tweet/tweet.component';
 import { NavtabComponent } from './components/navtab/navtab.component';
 import { TweetDetailsComponent } from './components/tweet-details/tweet-details.component';
 import { TwitterService } from 'src/app/services/twitter.service';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -29,10 +31,11 @@ import { TwitterService } from 'src/app/services/twitter.service';
     AppComponent,
     HomeComponent,
     TrendListComponent,
-    TrendpipePipe,
+    TweetpipePipe,
     TweetComponent,
     NavtabComponent,
     TweetDetailsComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

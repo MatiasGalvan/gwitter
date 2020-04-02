@@ -1,24 +1,15 @@
-
-<div class="container">
-
-  <mat-sidenav-container>
-    <mat-sidenav>Start</mat-sidenav>
-    <mat-sidenav position="end">End</mat-sidenav>
-    <section>
-
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <mat-label> Search Trend </mat-label>
-          <input matInput name="trendFilter" placeholder="Search..." [(ngModel)]="trendFilter">
-        </mat-form-field>
-
-      </form>
-      <mat-nav-list>
-        <mat-list-item *ngFor="let trend of trendListFiltered | trendpipe: trendFilter">
-          <a mat-list-item href="{{ trend.url }}">
-            {{ trend.name }} </a>
-        </mat-list-item>
-      </mat-nav-list>
-    </section>
-  </mat-sidenav-container>
-</div>
+<app-search>
+</app-search>
+<mat-sidenav-container>
+  <mat-sidenav>Start</mat-sidenav>
+  <mat-sidenav position="end">End</mat-sidenav>
+  <section>
+    <mat-nav-list>
+      <h2> Trends for you </h2>
+      <mat-list-item  *ngFor="let trend of trendListFiltered">
+        <a mat-list-item href="{{ trend.url }}">
+          {{ trend.name }} </a>
+      </mat-list-item>
+    </mat-nav-list>
+  </section>
+</mat-sidenav-container>
