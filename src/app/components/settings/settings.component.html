@@ -1,50 +1,43 @@
-<!--<mat-selection-list class="container">
-  <h3>Silence notifications from...</h3>
-  <mat-list-option id="option" (click)="handleCheck(i)" *ngFor="let setting of settings;let i = index"  color="primary">
-    {{ setting.setting }}
-  </mat-list-option>
-</mat-selection-list>
--->
-<section class="checkBoxes">
-  <h3>Silence notifications from...</h3>
-  <section>
-    <h4>People who have not verified the account</h4>
+<section class="container">
+  <h3 class="settingsTitle">Silence notifications from...</h3>
+  <label class="option">
+    People who have not verified the account
     <input type="checkbox" 
-      name="verified" 
+      id="verified" 
       checked="{{settings.hushNotVerifiedAccount}}"  
       [(ngModel)]="settings.hushNotVerifiedAccount"
     />
-  </section>
-  <section>
-    <h4>People who do not follow</h4>
+  </label>
+  <label class="option">
+    People who do not follow
     <input type="checkbox" 
       name="verified" 
       checked="{{settings.hushNotFollowed}}"  
       [(ngModel)]="settings.hushNotFollowed"
     />
-  </section>
-  <section>
-    <h4>People who have default profile information</h4>
+  </label>
+  <label class="option">
+    People who have default profile information
     <input type="checkbox" 
       name="verified" 
       checked="{{settings.hushDefaultProfile}}"  
       [(ngModel)]="settings.hushDefaultProfile"
     />
-  </section>
-  <section>
-    <h4>Tweets that contains a link</h4>
+  </label>
+  <label class="option">
+    Tweets that contains a link
     <input type="checkbox" 
       name="verified" 
       checked="{{settings.hushTweetsWithLink}}"  
       [(ngModel)]="settings.hushTweetsWithLink"
     />
-  </section>
-  <section>
-    <h4>Tweets that has text truncated</h4>
+  </label>
+  <label class="option">
+    Tweets that has text truncated
     <input type="checkbox" 
       name="verified" 
       checked="{{settings.hushTextTruncated}}"  
       [(ngModel)]="settings.hushTextTruncated"
     />
-  </section>
+  </label>
 </section>

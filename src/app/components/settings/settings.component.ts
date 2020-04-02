@@ -11,11 +11,8 @@ export class SettingsComponent implements OnInit {
 
   settings: IConfiguration;
 
-  constructor( 
-    private twitterService: TwitterService,
-  ) {
-    
-  }
+  constructor( private twitterService: TwitterService ) {}
+  
   ngOnInit(): void {
     this.settings = this.twitterService.getSettings();
   }
