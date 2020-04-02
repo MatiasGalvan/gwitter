@@ -1,15 +1,4 @@
-.example-container {
-  width : 400px ;
- height : 300px;
- margin : 10px ;
- border : 1px solid #555 ;
-}
 
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-}
 
 .example-full-width {
   width: 100%;
@@ -22,3 +11,41 @@
 
 }
 
+
+/*--------------------------------*/
+
+img {
+  width: 100%;
+  margin-bottom: 18%;
+}
+.card-picture {
+  width: 45%;
+  height: 10%;
+  margin-bottom: 2%;
+}
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+
+.container.content{
+  min-height: 100%;
+  width: 50%;
+}
+.search-form {
+  width: 90%;
+}
+
+/* Sidebar/left column */
+.side {
+  flex: 40%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 60%;
+  background-color: white;
+  padding: 20px;
+}

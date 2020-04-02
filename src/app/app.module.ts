@@ -34,12 +34,12 @@ import { SearchComponent } from './components/search/search.component';
 
 /*-----------------------------Others-----------------------------------------*/
 import { AppComponent } from './app.component';
-import { TrendpipePipe } from './pipes/trendpipe.pipe';
+
 import { TweetpipePipe } from './pipes/tweetpipe.pipe';
 
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { NgxSpinnerModule } from "ngx-spinner";
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [

@@ -19,8 +19,8 @@ export class TwitterService {
     return this.http.get<any>(URL + SEARCH + q)
       .pipe(tap(data => JSON.parse(JSON.stringify(data))));
   }
-  
-  getTimeline(amount: number){
+
+  getTimeline(amount: number) {
     return this.http.get<any>(URL + TIMELINE + amount)
       .pipe(tap(data => JSON.parse(JSON.stringify(data))));
   }

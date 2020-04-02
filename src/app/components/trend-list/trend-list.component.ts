@@ -2,7 +2,7 @@
 
 import { TrendService } from 'src/app/services/trend.service';
 import { Component, OnInit } from '@angular/core';
-import { filter } from 'rxjs/operators';
+
 import { ITrend } from 'src/app/models/trend';
 
 
@@ -26,6 +26,8 @@ export class TrendListComponent implements OnInit {
     console.log('In onInit' + this.trendListFiltered);
     this.getTrends();
   }
+
+
 
   getTrends(): void {
     this.trendService.getTrends()
