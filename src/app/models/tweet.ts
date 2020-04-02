@@ -22,7 +22,7 @@ export interface ITweet {
   entities: {
     media: {
       media_url: string;
-    };
+    },
   };
   
   user : IUser;
