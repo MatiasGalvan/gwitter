@@ -1,6 +1,43 @@
-<mat-selection-list class="container">
-  <h3>Silence notifications from...</h3>
-  <mat-list-option id="option" (click)="handleCheck(i)" *ngFor="let setting of settings;let i = index"  color="primary">
-    {{ setting.setting }}
-  </mat-list-option>
-</mat-selection-list>
+<section class="container">
+  <h3 class="settingsTitle">Silence notifications from...</h3>
+  <label class="option">
+    People who have not verified the account
+    <input type="checkbox" 
+      id="verified" 
+      checked="{{settings.hushNotVerifiedAccount}}"  
+      [(ngModel)]="settings.hushNotVerifiedAccount"
+    />
+  </label>
+  <label class="option">
+    People who do not follow
+    <input type="checkbox" 
+      name="verified" 
+      checked="{{settings.hushNotFollowed}}"  
+      [(ngModel)]="settings.hushNotFollowed"
+    />
+  </label>
+  <label class="option">
+    People who have default profile information
+    <input type="checkbox" 
+      name="verified" 
+      checked="{{settings.hushDefaultProfile}}"  
+      [(ngModel)]="settings.hushDefaultProfile"
+    />
+  </label>
+  <label class="option">
+    Tweets that contains a link
+    <input type="checkbox" 
+      name="verified" 
+      checked="{{settings.hushTweetsWithLink}}"  
+      [(ngModel)]="settings.hushTweetsWithLink"
+    />
+  </label>
+  <label class="option">
+    Tweets that has text truncated
+    <input type="checkbox" 
+      name="verified" 
+      checked="{{settings.hushTextTruncated}}"  
+      [(ngModel)]="settings.hushTextTruncated"
+    />
+  </label>
+</section>

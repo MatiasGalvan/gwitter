@@ -6,4 +6,6 @@ export interface IUser {
   verified : boolean;
   url : string; 
   profile_image_url : string;
+  following: boolean;
+  default_profile: boolean;
 }

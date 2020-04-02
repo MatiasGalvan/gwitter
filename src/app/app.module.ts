@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { MatInputModule } from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
 
 /*------------------------Angular Modules-------------------------------------*/
 import { HttpClientModule } from '@angular/common/http';
@@ -34,7 +35,7 @@ import { SearchComponent } from './components/search/search.component';
 
 /*-----------------------------Others-----------------------------------------*/
 import { AppComponent } from './app.component';
-import { TrendpipePipe } from './pipes/trendpipe.pipe';
+//import { TrendpipePipe } from './pipes/trendpipe.pipe';
 import { TweetpipePipe } from './pipes/tweetpipe.pipe';
 
 
@@ -61,6 +62,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatCheckboxModule,
     HttpClientModule,
     FormsModule,
     MatListModule,
