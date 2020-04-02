@@ -34,7 +34,7 @@ import { SearchComponent } from './components/search/search.component';
 
 /*-----------------------------Others-----------------------------------------*/
 import { AppComponent } from './app.component';
-import { TrendpipePipe } from './pipes/trendpipe.pipe';
+//import { TrendpipePipe } from './pipes/trendpipe.pipe';
 import { TweetpipePipe } from './pipes/tweetpipe.pipe';
 
 
