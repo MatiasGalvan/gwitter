@@ -1,6 +1,6 @@
 
 import { TwitterService } from 'src/app/services/twitter.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ITweet } from 'src/app/models/tweet';
 import { map } from 'rxjs/operators';
 
@@ -9,21 +9,35 @@ import { map } from 'rxjs/operators';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent implements OnInit, OnChanges {
   tweetList: ITweet[] = [];
   keyword = '';
+  @Input() keyTrend: string;
+
   constructor(private twitterService: TwitterService) { }
+
 
   ngOnInit(): void {
     this.getTweetList(this.keyword);
   }
 
-  onClick() {
-    console.log(this.keyword);
-    console.log(this.tweetList);
-    this.getTweetList(this.keyword);
-    console.log(this.tweetList);
+  ngOnChanges(changes: any) {
+    console.log("Changes " + changes);
+    if (changes.keyTrend.currentValue) {
+      this.keyword = changes.keyTrend.currentValue;
+      this.getTweetList(this.keyword);
+
+    }
+
   }
+
+  onClick() {
+
+    this.getTweetList(this.keyword);
+
+  }
+
+
 
   getTweetList(q: string): void {
     this.twitterService.getTweetList(q)

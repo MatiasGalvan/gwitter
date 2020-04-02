@@ -1,3 +1,4 @@
+
 <mat-form-field class="search-form">
   <div>
     <input matInput [(ngModel)]="keyword" type="text" placeholder="Search tweet">
@@ -8,10 +9,8 @@
 </mat-form-field>
 <br>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-  <div *ngIf="tweetList">
-    <mat-card class="card-picture" *ngFor="let tweet of tweetList">
-      <app-tweet [tweet]="tweet"></app-tweet>
-    </mat-card>
+  <mat-card class="card-picture" *ngFor="let tweet of tweetList">
+    <app-tweet [tweet]="tweet"></app-tweet>
+  </mat-card>
 
-  </div>
 </div>
