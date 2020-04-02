@@ -11,7 +11,6 @@ import { map } from 'rxjs/operators';
 })
 export class SearchComponent implements OnInit {
   tweetList: ITweet[] = [];
-  showTweets = false;
   keyword = '';
   constructor(private twitterService: TwitterService) { }
 
@@ -33,7 +32,6 @@ export class SearchComponent implements OnInit {
       )
       .subscribe((tweetList: ITweet[]) => {
         this.tweetList = tweetList;
-
         console.log(this.tweetList);
       },
         (error) => {

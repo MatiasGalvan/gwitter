@@ -1,8 +1,10 @@
 <mat-form-field class="search-form">
-
-  <input matInput [(ngModel)]="keyword" type="text" placeholder="Search tweet">
-  <button mat-mat-raised-button color="primary" (click)="onClick()"> Search </button>
-
+  <div>
+    <input matInput [(ngModel)]="keyword" type="text" placeholder="Search tweet">
+    <button mat-mini-fab color="primary" (click)="onClick()">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
 </mat-form-field>
 <br>
 <div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">

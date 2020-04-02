@@ -1,4 +1,4 @@
-<app-search>
+<!-- <app-search>
 </app-search>
 <mat-sidenav-container>
   <mat-sidenav>Start</mat-sidenav>
@@ -12,4 +12,23 @@
       </mat-list-item>
     </mat-nav-list>
   </section>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+<div class="flex-container">
+  <div class="side" style="flex-shrink: 2">
+    <section>
+      <mat-nav-list>
+        <h2> Trends for you </h2>
+        <mat-list-item *ngFor="let trend of trendListFiltered">
+          <a mat-list-item href="{{ trend.url }}">
+            {{ trend.name }} </a>
+        </mat-list-item>
+      </mat-nav-list>
+    </section>
+  </div>
+  <div class="main" style="flex-shrink: 0">
+    <app-search>
+    </app-search>
+  </div>
+
+</div>

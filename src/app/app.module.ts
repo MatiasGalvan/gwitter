@@ -53,6 +53,7 @@ import { SearchComponent } from './components/search/search.component';
     MatInputModule,
     MatCardModule,
     HttpClientModule,
+
   ],
   providers: [
     TwitterService,
