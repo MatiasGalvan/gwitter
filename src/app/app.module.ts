@@ -1,4 +1,6 @@
+
 /*------------------------Material Angular Components------------------------ */
+
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -28,11 +30,12 @@ import { TrendListComponent } from './components/trend-list/trend-list.component
 /*----------------------------Services----------------------------------------*/
 import { TrendService } from './services/trend.service'
 import { TwitterService } from 'src/app/services/twitter.service';
+import { SearchComponent } from './components/search/search.component';
 
 /*-----------------------------Others-----------------------------------------*/
 import { AppComponent } from './app.component';
 import { TrendpipePipe } from './pipes/trendpipe.pipe';
-
+import { TweetpipePipe } from './pipes/tweetpipe.pipe';
 
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
@@ -43,10 +46,11 @@ import { NgxSpinnerModule } from "ngx-spinner";
     AppComponent,
     HomeComponent,
     TrendListComponent,
-    TrendpipePipe,
+    TweetpipePipe,
     TweetComponent,
     NavtabComponent,
     TweetDetailsComponent,
+    SearchComponent,
     SettingsComponent,
   ],
   imports: [

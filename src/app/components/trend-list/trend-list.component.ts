@@ -15,10 +15,7 @@ export class TrendListComponent implements OnInit {
 
   selectedTrend: ITrend;
   errorMessage: any;
-  trendFilter = '';
   trendListFiltered: ITrend[] = [];
-  pageTitle = 'TrendList';
-
 
 
   constructor(private trendService: TrendService) {
@@ -29,10 +26,6 @@ export class TrendListComponent implements OnInit {
     console.log('In onInit' + this.trendListFiltered);
     this.getTrends();
   }
-  /*onSelect(trend: ITrend) {
-    this.selectedTrend = trend;
-
-  }*/
 
   getTrends(): void {
     this.trendService.getTrends()

@@ -1,0 +1,29 @@
+/*img {
+  width: 100%;
+  margin-bottom: 18%;
+}
+.card-picture {
+  width: 45%;
+  height: 10%;
+  margin-bottom: 2%;
+}
+.container {
+  min-height: 100%;
+  width: 100%;
+}
+.search-form {
+  width: 90%;
+}*/
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
