@@ -1,6 +1,9 @@
+<section>
+<a class="tweet-link" routerLink="/tweet-details/{{tweet.id_str}}">
 <mat-card class="container">
+  
     <mat-card-content class="item1">
-        <section class="image">
+        <section class="image" >
             <img class="profileImage circularImage" src="{{tweet.user.profile_image_url}}" alt="Photo">
         </section>
     </mat-card-content>
@@ -31,17 +34,20 @@
         </mat-card-content>
 
         <mat-card-content>
-            <button mat-mini-fab class="button" color="primary">
+            <button mat-mini-fab class="button heart" color="primary">
                 <mat-icon>favorite</mat-icon>
             </button>
             <span>{{tweet.favorite_count}}</span>
-            <button mat-mini-fab class="button" color="primary">
+            <button mat-mini-fab class="button rt" color="primary">
                 <mat-icon>autorenew</mat-icon>
             </button>
             <span>{{tweet.retweet_count}}</span>
-            <button mat-mini-fab class="button" color="primary">
+            <button mat-mini-fab class="button comment" color="primary">
                 <mat-icon>comment</mat-icon>
             </button>
         </mat-card-content>
     </section>
+  
 </mat-card>
+</a>
+</section>

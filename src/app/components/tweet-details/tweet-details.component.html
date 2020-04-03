@@ -1,1 +1,53 @@
-<p>tweet-details works!</p>
+<mat-card class="container">
+  <header class="header">
+  <a (click)="goBack()">
+    <span class="icons"> <mat-icon>keyboard_backspace</mat-icon> </span> Tweet
+  </a>
+  </header>
+  <hr>
+  <img src="{{ tweet.user.profile_image_url }}" alt="" class="profileImage" />
+
+  <div class="tweetHead">
+    <span class="userName">{{ tweet.user.name }} <mat-icon class="verified" *ngIf="tweet.user.verified">verified_user</mat-icon> </span>
+    <span class="screenName"> @{{ tweet.user.screen_name }} </span>
+  </div>
+  <section class="tweetText">
+    <p class="textBody"> {{tweet.text}} </p>
+
+    <div class="tweetImageContainer" *ngIf="tweet.entities.media">
+        <img
+          src="{{tweet.entities.media[0].media_url}}"
+          width="400"
+          height="250"
+          class="tweetImage"
+        />
+    </div>
+  </section>
+
+  <div class="details-date">
+    {{tweet.created_at | date:'h:mm'}} p.m. - {{tweet.created_at | date:'d LLL. yy' | lowercase}}
+  </div>
+  <hr>
+  <div class="tweetFooter">
+    <div class="retweet">
+      <span> {{ tweet.retweet_count }} Retweets </span>
+    </div>
+    <div class="favourite">
+      <span> {{ tweet.favorite_count }} Like </span>
+    </div>
+  </div>
+  <hr>
+  <mat-card-content class="buttonGroup">
+    <button mat-mini-fab class="button-heart" color="primary">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    
+    <button mat-mini-fab class="button-rt" color="primary">
+        <mat-icon>autorenew</mat-icon>
+    </button>
+    
+    <button mat-mini-fab class="button-comment" color="primary">
+        <mat-icon>comment</mat-icon>
+    </button>
+  </mat-card-content>
+</mat-card>

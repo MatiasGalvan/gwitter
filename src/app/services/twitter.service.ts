@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpErrorResponse, HttpClient } from '@angular/common/http';
-import { URL, SEARCH, TIMELINE } from './../endpoints';
-import { map, tap } from 'rxjs/operators';
+import { URL, SEARCH, TIMELINE, TWEET } from './../endpoints';
+import { map, tap, catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { IConfiguration } from '../models/configuration';
+import { ITweet } from '../models/tweet';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TwitterService {
-
+  
+  tweet : ITweet;
+  private url = URL + TWEET; 
   settings: IConfiguration;
 
   constructor( private http: HttpClient ) {
@@ -25,6 +29,12 @@ export class TwitterService {
   getTweetList(q: string) {
     return this.http.get<any>(URL + SEARCH + q)
       .pipe(tap(data => JSON.parse(JSON.stringify(data))));
+  }
+
+
+  getIdTweet (searchId : string): Observable<any> {
+    return this.http.get<any>(this.url+searchId)
+    .pipe(tap(data => JSON.parse(JSON.stringify(data))));
   }
 
   getTimeline(amount: number) {
