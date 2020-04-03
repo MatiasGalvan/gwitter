@@ -1,8 +1,7 @@
 * {
-  color: rgb(83, 83, 83);
   margin: 0;
   padding: 0;
-  font-size: 0.78rem;
+  box-sizing: border-box;
 }
 
 .container {
@@ -10,27 +9,25 @@
   background-color: #fff;
 }
 
-.material-icons {
+.icons {
   text-decoration : none;
   cursor : pointer;
-  color : rgb(106, 166, 221);
-  margin : 20px 0;
+  /*margin : 20px 0;*/
   text-align : left;
-  width : 20px;
+  /*width : 20px;*/
 }
 
 .header {
   font-family : 'Quicksand', sans-serif;
-  font-size : 15px;
-  font-weight : bold;
-  padding-top : 20px;
+  font-size : 24px;
+  padding: 3px;
 }
 
 .details-date {
   color : gray;
-  font-size : 12px;
-  margin : 15px 0;
-  padding : 20px;
+  font-size : 16px;
+  margin : 5px 0;
+  padding : 5px;
   margin-right : 1em;
 }
 
@@ -45,21 +42,28 @@
 .tweetHead {
   padding-top : 0;
   margin-top : 0;
+  margin-bottom: 10px;
   display : inline-block;
   margin-left : 1rem;
   vertical-align : 0.7rem;
 }
 
+.tweetText {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
 .tweetBody {
   margin-left : 3.7rem;
   margin-right : auto;
-  font-size : .6em;
+  font-size: 24px;
   padding : .6rem 0 .6rem 0;
 }
 
 .tweetFooter {
-  margin-left : 3.7rem;
-  margin-bottom : 0.5rem;
+  margin-left : 0.3rem;
+  margin-bottom : 0.8rem;
   margin-top : 0.8rem;
 }
 .retweet,
@@ -67,8 +71,7 @@
   color : rgb(190, 190, 190);
   display : inline-block;
   margin-right : 1em;
-  margin : 15px 0;
-  padding : 20px;
+  margin : 10px;
 }
 .retweet:hover span {
   color: rgb(25, 175, 25);
@@ -81,20 +84,21 @@
   margin-right: 75px;
   background-color: rgb(255,0,106);
   color: white;
-  padding: 15px;
 }
 
 .button-rt {
   margin-right: 75px;
   background-color: rgb(90,184,90);
   color: white;
-  padding: 15px 13px;
 }
 
 .button-comment {
   margin-right: 75px;
   background-color: cornflowerblue;
   color: white;
+}
+
+.buttonGroup{
   padding: 15px;
 }
 

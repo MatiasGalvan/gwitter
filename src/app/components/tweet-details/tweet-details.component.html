@@ -1,11 +1,8 @@
 <mat-card class="container">
   <header class="header">
-  <a class="back-button" (click)="goBack()">
-    <span class="material-icons">
-      keyboard_backspace
-      </span>
+  <a (click)="goBack()">
+    <span class="icons"> <mat-icon>keyboard_backspace</mat-icon> </span> Tweet
   </a>
-  Tweet
   </header>
   <hr>
   <img src="{{ tweet.user.profile_image_url }}" alt="" class="profileImage" />
@@ -14,8 +11,8 @@
     <span class="userName">{{ tweet.user.name }} <mat-icon class="verified" *ngIf="tweet.user.verified">verified_user</mat-icon> </span>
     <span class="screenName"> @{{ tweet.user.screen_name }} </span>
   </div>
-  <section>
-    <div class="textBody"> {{tweet.text}} </div>
+  <section class="tweetText">
+    <p class="textBody"> {{tweet.text}} </p>
 
     <div class="tweetImageContainer" *ngIf="tweet.entities.media">
         <img
@@ -33,16 +30,14 @@
   <hr>
   <div class="tweetFooter">
     <div class="retweet">
-      
       <span> {{ tweet.retweet_count }} Retweets </span>
     </div>
     <div class="favourite">
-      
       <span> {{ tweet.favorite_count }} Like </span>
     </div>
   </div>
   <hr>
-  <mat-card-content>
+  <mat-card-content class="buttonGroup">
     <button mat-mini-fab class="button-heart" color="primary">
         <mat-icon>favorite</mat-icon>
     </button>
