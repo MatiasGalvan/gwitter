@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-//import { Router } from '@angular/router';
-
 import { ITweet } from '../../models/tweet';
-import { IUser } from '../../models/user';
 import { TwitterService } from '../../services/twitter.service';
 import { NgxSpinnerService } from "ngx-spinner";
 
@@ -16,28 +12,18 @@ export class HomeComponent implements OnInit {
   timeline: ITweet[] = [];
   notscrolly = true;
   allLoaded = false;
-  initialTweets = 10; 
-  index = 1; 
-  count: number; 
+  initialTweets = 25;
+  index = 1;
+  count: number;
 
   constructor(
-
     private twitterService: TwitterService,
-    private spinner: NgxSpinnerService,
-    //private router: Router
+    private spinner: NgxSpinnerService
   ) { }
-
-  
- /*
-  handleSettingView(): void {
-    this.router.navigate(['/settings']);
-
-  }*/
 
   ngOnInit(): void {
     this.getTimeline(this.initialTweets);
     console.log(this.timeline);
-    //this.addTweet();
   }
 
   getTimeline(amount): void {
@@ -65,9 +51,9 @@ export class HomeComponent implements OnInit {
   addTweets(count: number) {
     this.twitterService.getTimeline(count)
       .subscribe(tweets => {
-      this.timeline = tweets;
-      this.notscrolly = true;
-      this.spinner.hide();
-    });
+        this.timeline = tweets;
+        this.notscrolly = true;
+        this.spinner.hide();
+      });
   }
 }

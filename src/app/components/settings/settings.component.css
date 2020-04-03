@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+    margin-top: 4px;
+}
+
+.settingsTitle {
+    padding: 5px 15px;
+    background-color: #3B7080;
+    color: cornsilk;
+    font-size: large;
+}
+
+.option {
+    background-color: #fff;
+    display: block;
+    padding: 15px;
+    cursor:pointer;
+}
+
+.option:hover{
+    background-color:rgba(170, 184, 194, 0.1);
+    color: #3B7080;
+}

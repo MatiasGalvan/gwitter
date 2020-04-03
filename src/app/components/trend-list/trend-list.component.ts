@@ -13,12 +13,9 @@ import { ITrend } from 'src/app/models/trend';
 })
 export class TrendListComponent implements OnInit {
 
-  selectedTrend: ITrend;
+  selectedTrend: string;
   errorMessage: any;
-  trendFilter = '';
   trendListFiltered: ITrend[] = [];
-  pageTitle = 'TrendList';
-
 
 
   constructor(private trendService: TrendService) {
@@ -29,11 +26,13 @@ export class TrendListComponent implements OnInit {
     console.log('In onInit' + this.trendListFiltered);
     this.getTrends();
   }
-  /*onSelect(trend: ITrend) {
-    this.selectedTrend = trend;
 
-  }*/
+  onClick(event: any) {
+    if (event && event.target) {
+      this.selectedTrend = event.target.innerText;
+    }
 
+  }
   getTrends(): void {
     this.trendService.getTrends()
       .subscribe(obj => {

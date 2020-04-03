@@ -1,20 +1,4 @@
-
-
-.example-full-width {
-  width: 100%;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-}
-
-
-/*--------------------------------*/
-
-img {
+/*img {
   width: 100%;
   margin-bottom: 18%;
 }
@@ -27,25 +11,19 @@ img {
   min-height: 100%;
   width: 100%;
 }
-
-.container.content{
-  min-height: 100%;
-  width: 50%;
-}
 .search-form {
   width: 90%;
-}
-
+}*/
 /* Sidebar/left column */
 .side {
-  flex: 40%;
+  flex: 30%;
   background-color: #f1f1f1;
   padding: 20px;
 }
 
 /* Main column */
 .main {
-  flex: 60%;
+  flex: 70%;
   background-color: white;
   padding: 20px;
 }
