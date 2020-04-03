@@ -1,20 +1,15 @@
 <div class="flex-container">
+  <div class="main" style="flex-shrink: 0">
+    <app-search [keyTrend]="selectedTrend"> </app-search>
+  </div>
   <div class="side" style="flex-shrink: 2">
     <section>
       <mat-nav-list>
-        <h2> Trends for you </h2>
+        <h2>Trends for you</h2>
         <mat-list-item *ngFor="let trend of trendListFiltered">
-
-          <a mat-list-item (click)="onClick($event)">
-            {{ trend.name }} </a>
+          <a mat-list-item (click)="onClick($event)"> {{ trend.name }} </a>
         </mat-list-item>
-
       </mat-nav-list>
     </section>
   </div>
-  <div class="main" style="flex-shrink: 0">
-    <app-search [keyTrend]="selectedTrend">
-    </app-search>
-  </div>
-
 </div>

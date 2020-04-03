@@ -1,16 +1,27 @@
-
-<mat-form-field class="search-form">
-  <div>
-    <input matInput [(ngModel)]="keyword" type="text" placeholder="Search tweet">
-    <button mat-mini-fab color="primary" (click)="onClick()">
-      <mat-icon>search</mat-icon>
-    </button>
+<div class="container">
+  <button mat-mini-fab color="primary" (click)="onClick()">
+    <mat-icon>search</mat-icon>
+  </button>
+  <mat-form-field class="search-form">
+    <div>
+      <input
+        matInput
+        [(ngModel)]="keyword"
+        type="text"
+        placeholder="Search tweet"
+      />
+    </div>
+  </mat-form-field>
+  <br />
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutWrap
+    fxLayoutGap="0.5%"
+    fxLayoutAlign="center"
+  >
+    <mat-card class="card-picture" *ngFor="let tweet of tweetList">
+      <app-tweet [tweet]="tweet"></app-tweet>
+    </mat-card>
   </div>
-</mat-form-field>
-<br>
-<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
-  <mat-card class="card-picture" *ngFor="let tweet of tweetList">
-    <app-tweet [tweet]="tweet"></app-tweet>
-  </mat-card>
-
 </div>
