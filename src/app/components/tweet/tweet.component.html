@@ -1,6 +1,7 @@
 <mat-card class="container">
+  <a class="tweet-link" routerLink="/tweet-details/{{tweet.id_str}}">
     <mat-card-content class="item1">
-        <section class="image">
+        <section class="image" >
             <img class="profileImage circularImage" src="{{tweet.user.profile_image_url}}" alt="Photo">
         </section>
     </mat-card-content>
@@ -44,4 +45,5 @@
             </button>
         </mat-card-content>
     </section>
+  </a>
 </mat-card>
