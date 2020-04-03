@@ -1,16 +1,12 @@
-
-
 .example-full-width {
   width: 100%;
 }
 
 .flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-
 }
-
 
 /*--------------------------------*/
 
@@ -28,7 +24,7 @@ img {
   width: 100%;
 }
 
-.container.content{
+.container.content {
   min-height: 100%;
   width: 50%;
 }

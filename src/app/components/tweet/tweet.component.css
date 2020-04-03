@@ -1,70 +1,71 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.container{
+  }
+  
+  .container {
     display: flex;
+    justify-content: center;
     width: 100%;
     background-color: #fff;
     margin-bottom: 10px;
-}
-
-.container:hover{
-    background-color:rgba(170, 184, 194, 0.1);
-}
-
-.item1{
+  }
+  
+  .container:hover {
+    background-color: rgba(170, 184, 194, 0.1);
+  }
+  
+  .item1 {
     width: 5%;
     min-width: 75px;
-}
-
-.item2{
+  }
+  
+  .item2 {
     width: 95%;
     padding: 0 15px;
-}
-
-.profileImage{
+  }
+  
+  .profileImage {
     max-width: 48px;
     max-height: 48px;
     min-width: 48px;
     min-height: 48px;
     width: 100%;
     height: auto;
-}
-
-.image{
+  }
+  
+  .image {
     display: flex;
     margin: auto;
     justify-content: center;
-}
-
-.button{
+  }
+  
+  .button {
     margin: 0 10px;
-}
-
-.circularImage{
+  }
+  
+  .circularImage {
     border-radius: 50%;
-}
-
-.screenName{
-    color:gray;
-}
-
-.verified{
+  }
+  
+  .screenName {
+    color: gray;
+  }
+  
+  .verified {
     font-size: 18px;
-}
-
-.tweetImage{
+  }
+  
+  .tweetImage {
     margin: 10px auto;
     border-radius: 5px;
     border: solid 1px gray;
-}
-
-.tweetImageContainer{
+  }
+  
+  .tweetImageContainer {
     width: 100%;
-}
+  }
 
 .heart {
     background-color: rgb(255,0,106);

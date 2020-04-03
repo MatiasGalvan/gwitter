@@ -1,20 +1,13 @@
-/*img {
-  width: 100%;
-  margin-bottom: 18%;
+.container{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
 }
-.card-picture {
-  width: 45%;
-  height: 10%;
-  margin-bottom: 2%;
+
+.search-form{
+  flex-direction: row;
 }
-.container {
-  min-height: 100%;
-  width: 100%;
-}
-.search-form {
-  width: 90%;
-}*/
-/* Sidebar/left column */
+
 .side {
   flex: 30%;
   background-color: #f1f1f1;
