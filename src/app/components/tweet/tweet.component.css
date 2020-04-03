@@ -72,3 +72,8 @@
         min-width: 300px;
     }
 }
+
+.tweet-link {
+  color : inherit;
+  text-decoration: none;
+}
